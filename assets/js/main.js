@@ -279,14 +279,15 @@ class SiteManager {
     showFieldError(field, message) {
         this.clearFieldError(field);
         
-        field.style.borderColor = 'var(--primary-red)';
+        field.style.borderColor = 'var(--accent-red, #EF4444)';
+        field.classList.add('error');
         
         const errorDiv = document.createElement('div');
-        errorDiv.className = 'field-error';
+        errorDiv.className = 'field-error text-sm text-red-500 mt-1';
         errorDiv.textContent = message;
-        errorDiv.style.color = 'var(--primary-red)';
-        errorDiv.style.fontSize = 'var(--font-size-sm)';
-        errorDiv.style.marginTop = 'var(--spacing-1)';
+        errorDiv.style.color = 'var(--accent-red, #EF4444)';
+        errorDiv.style.fontSize = 'var(--font-size-sm, 0.875rem)';
+        errorDiv.style.marginTop = 'var(--spacing-2, 0.5rem)';
         
         field.parentNode.appendChild(errorDiv);
     }
@@ -296,6 +297,7 @@ class SiteManager {
      */
     clearFieldError(field) {
         field.style.borderColor = '';
+        field.classList.remove('error');
         const existingError = field.parentNode.querySelector('.field-error');
         if (existingError) {
             existingError.remove();
@@ -612,6 +614,31 @@ class SiteManager {
         }
     };
 }
+
+// Global functions for modern design compatibility
+function openConsultationModal(service = 'general') {
+    if (window.siteManager) {
+        window.siteManager.openModal('consultation', service);
+    } else {
+        // Fallback: simple alert for immediate testing
+        const phone = prompt('Введіть ваш номер телефону для консультації:');
+        if (phone) {
+            alert('Дякуємо! Наш юрист передзвонить вам протягом 3 хвилин.');
+        }
+    }
+}
+
+function openCallbackModal() {
+    if (window.siteManager) {
+        window.siteManager.openModal('callback');
+    } else {
+        openConsultationModal('callback');
+    }
+}
+
+// Make functions globally available
+window.openConsultationModal = openConsultationModal;
+window.openCallbackModal = openCallbackModal;
 
 // Ініціалізація при завантаженні DOM
 document.addEventListener('DOMContentLoaded', () => {

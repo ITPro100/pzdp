@@ -125,7 +125,7 @@ function validateLead(data) {
         if (name.length < 2 || name.length > 50) {
             errors.push('Ім\'я повинно містити від 2 до 50 символів');
         }
-        if (!/^[a-zA-Zа-яА-ЯіІїЇєЄ\s\'-]+$/u.test(name)) {
+        if (!/^[a-zA-Zа-яА-ЯіІїЇєЄ\s'-]+$/u.test(name)) {
             errors.push('Ім\'я містить недопустимі символи');
         }
     }
