@@ -708,6 +708,33 @@
     transform: translate(-50%, -50%) scale(1.1);
 }
 
+/* Additional Icon Fixes for Components */
+.notification__icon {
+    font-size: var(--font-size-lg) !important;
+    width: auto !important;
+    height: auto !important;
+    flex-shrink: 0 !important;
+}
+
+.testimonial__verified {
+    font-size: var(--font-size-sm) !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.contact__item i {
+    font-size: var(--font-size-xl) !important;
+    width: auto !important;
+    height: auto !important;
+    margin-top: var(--spacing-1) !important;
+}
+
+.guarantee i {
+    font-size: inherit !important;
+    width: auto !important;
+    height: auto !important;
+}
+
 /* Responsive utilities for components */
 @media (max-width: 767px) {
     .tabs__nav {

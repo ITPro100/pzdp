@@ -922,6 +922,39 @@ section {
     }
 }
 
+/* Icon Fixes */
+i.fas, i.far, i.fab {
+    font-size: inherit !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: inherit !important;
+    display: inline-block !important;
+    vertical-align: baseline !important;
+}
+
+.btn i {
+    font-size: 1em !important;
+    margin-right: var(--spacing-1) !important;
+}
+
+.benefit__icon {
+    font-size: var(--font-size-2xl) !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.service-card__icon {
+    font-size: var(--font-size-5xl) !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.advantage__icon {
+    font-size: var(--font-size-5xl) !important;
+    width: auto !important;
+    height: auto !important;
+}
+
 /* Utility Classes */
 .text-center { text-align: center; }
 .text-left { text-align: left; }

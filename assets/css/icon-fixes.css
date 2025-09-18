@@ -1,0 +1,209 @@
+/* Icon Fixes and Overrides */
+
+/* Global Icon Reset */
+.fas, .far, .fab, .fal, .fad, .fas::before, .far::before, .fab::before, .fal::before, .fad::before {
+    font-size: inherit !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+    vertical-align: baseline !important;
+    display: inline !important;
+}
+
+/* Specific Icon Containers */
+.benefit__icon {
+    font-size: 1.5rem !important;
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    margin-right: 0.75rem !important;
+}
+
+.service-card__icon {
+    font-size: 3rem !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+}
+
+.advantage__icon {
+    font-size: 3rem !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+}
+
+.stat-card__icon {
+    font-size: 2.5rem !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    text-align: center !important;
+    margin-bottom: 0.75rem !important;
+}
+
+/* Button Icons */
+.btn .fas, .btn .far, .btn .fab {
+    font-size: 1em !important;
+    width: auto !important;
+    height: auto !important;
+    margin-right: 0.5rem !important;
+    display: inline !important;
+}
+
+/* Header Icons */
+.header__phone .fas {
+    font-size: 1em !important;
+    width: auto !important;
+    height: auto !important;
+    margin-right: 0.5rem !important;
+}
+
+/* Contact Icons */
+.contact__item .fas {
+    font-size: 1.25rem !important;
+    width: auto !important;
+    height: auto !important;
+    margin-top: 0.25rem !important;
+    flex-shrink: 0 !important;
+}
+
+/* Guarantee Icons */
+.guarantee .fas {
+    font-size: 1em !important;
+    width: auto !important;
+    height: auto !important;
+    margin-right: 0.5rem !important;
+    color: var(--success-green) !important;
+}
+
+/* Alert Icons */
+.alert .fas {
+    font-size: 1em !important;
+    width: auto !important;
+    height: auto !important;
+    margin-right: 0.5rem !important;
+}
+
+/* Urgency Banner Icons */
+.urgency-banner .fas {
+    font-size: 1em !important;
+    width: auto !important;
+    height: auto !important;
+    margin-right: 0.5rem !important;
+}
+
+/* Notification Icons */
+.notification__icon {
+    font-size: 1.125rem !important;
+    width: auto !important;
+    height: auto !important;
+    flex-shrink: 0 !important;
+    margin-right: 0.75rem !important;
+}
+
+/* Modal Close Icon */
+.modal__close {
+    font-size: 1.5rem !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+}
+
+/* Testimonial Icons */
+.testimonial__verified {
+    font-size: 0.875rem !important;
+    width: auto !important;
+    height: auto !important;
+    color: var(--success-green) !important;
+    margin-left: 0.5rem !important;
+}
+
+/* Star Rating Icons */
+.testimonial__rating .fas {
+    font-size: 1rem !important;
+    width: auto !important;
+    height: auto !important;
+    margin-right: 0.125rem !important;
+}
+
+.star--filled {
+    color: #FFC107 !important;
+}
+
+.star--empty {
+    color: #E5E7EB !important;
+}
+
+/* Arrow Icons in Components */
+.testimonials__arrow .fas,
+.accordion__icon {
+    font-size: 1rem !important;
+    width: auto !important;
+    height: auto !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* Feature List Icons */
+.feature-list__icon .fas {
+    font-size: 0.875rem !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* Timeline Icons */
+.timeline__item .fas {
+    font-size: 1rem !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* Price Card Icons */
+.price-card .fas {
+    font-size: 1em !important;
+    width: auto !important;
+    height: auto !important;
+    margin-right: 0.5rem !important;
+}
+
+/* Social Links Icons */
+.social-links__item .fab {
+    font-size: 1.25rem !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* Loading Spinner Fix */
+.btn--loading::after {
+    width: 16px !important;
+    height: 16px !important;
+    border-width: 2px !important;
+}
+
+/* Video Player Icon */
+.video-player__play .fas {
+    font-size: 2rem !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* Override any conflicting styles */
+[class*="icon"] .fas,
+[class*="icon"] .far,
+[class*="icon"] .fab {
+    max-width: none !important;
+    max-height: none !important;
+    min-width: auto !important;
+    min-height: auto !important;
+}
+
+/* Ensure proper text rendering */
+.fas, .far, .fab {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: auto !important;
+}
