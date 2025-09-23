@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест стилів</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'background': '#0b0b0c',
+                        'foreground': '#f5f7fa',
+                        'primary': '#2E7CF6',
+                        'muted-foreground': '#9aa3b2',
+                        'line': '#1e1f22',
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '1.25rem',
+                    },
+                    boxShadow: {
+                        'soft': '0 6px 30px rgba(0,0,0,.07)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { 
+            background-color: #0b0b0c; 
+            color: #f5f7fa; 
+        }
+    </style>
+</head>
+<body class="min-h-screen" style="background-color: #0b0b0c; color: #f5f7fa;">
+    <div class="container mx-auto max-w-6xl px-4 py-16">
+        <div class="text-center space-y-6 mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold text-white">
+                Правовий Захист Дніпро
+            </h1>
+            <p class="text-xl max-w-2xl mx-auto" style="color: #9aa3b2;">
+                Професійна правова допомога військовим у Дніпрі. Оскарження рішень ВЛК, 
+                незалежна оцінка здоров'я та повний спектр послуг військового права.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                    href="tel:+380633094480"
+                    class="inline-flex items-center justify-center rounded-xl px-8 py-4 text-sm font-medium text-white transition-all hover:opacity-90"
+                    style="background-color: #2E7CF6; box-shadow: 0 6px 30px rgba(46, 124, 246, 0.3);"
+                >
+                    📞 Зателефонувати зараз
+                </a>
+                <a 
+                    href="#consultation"
+                    class="inline-flex items-center justify-center rounded-xl px-8 py-4 text-sm font-medium transition-all hover:bg-white hover:bg-opacity-5"
+                    style="border: 1px solid #1e1f22; color: #f5f7fa;"
+                >
+                    📝 Записатися на консультацію
+                </a>
+            </div>
+        </div>
+
+        <!-- Test section to verify styles -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="rounded-2xl p-6 transition-all hover:bg-white hover:bg-opacity-5" 
+                 style="border: 1px solid #1e1f22; background: rgba(255, 255, 255, 0.05);">
+                <div class="w-12 h-12 rounded-xl mb-4 flex items-center justify-center" style="background: rgba(46, 124, 246, 0.1);">
+                    <span class="text-2xl">⚖️</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-white">Оскарження рішень ВЛК</h3>
+                <p style="color: #9aa3b2;">Професійне оскарження негативних рішень військово-лікарської комісії з високим відсотком успіху.</p>
+            </div>
+            
+            <div class="rounded-2xl p-6 transition-all hover:bg-white hover:bg-opacity-5" 
+                 style="border: 1px solid #1e1f22; background: rgba(255, 255, 255, 0.05);">
+                <div class="w-12 h-12 rounded-xl mb-4 flex items-center justify-center" style="background: rgba(46, 124, 246, 0.1);">
+                    <span class="text-2xl">🛡️</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-white">Незалежна оцінка здоров'я</h3>
+                <p style="color: #9aa3b2;">Експертна медична оцінка стану здоров'я для підтвердження професійних захворювань.</p>
+            </div>
+            
+            <div class="rounded-2xl p-6 transition-all hover:bg-white hover:bg-opacity-5" 
+                 style="border: 1px solid #1e1f22; background: rgba(255, 255, 255, 0.05);">
+                <div class="w-12 h-12 rounded-xl mb-4 flex items-center justify-center" style="background: rgba(46, 124, 246, 0.1);">
+                    <span class="text-2xl">⚡</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2 text-white">Швидке вирішення</h3>
+                <p style="color: #9aa3b2;">Оперативне ведення справ та максимально швидке досягнення результату за 24 години.</p>
+            </div>
+        </div>
+
+        <!-- Stats section -->
+        <div class="mt-16 text-center">
+            <h2 class="text-3xl font-bold text-white mb-12">Наші результати</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2" style="color: #2E7CF6;">87%</div>
+                    <p class="text-white font-medium">Успішних справ</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2" style="color: #2E7CF6;">500+</div>
+                    <p class="text-white font-medium">Задоволених клієнтів</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2" style="color: #2E7CF6;">24</div>
+                    <p class="text-white font-medium">Години на оскарження</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2" style="color: #2E7CF6;">7+</div>
+                    <p class="text-white font-medium">Років досвіду</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="mt-16" id="consultation">
+            <div class="max-w-md mx-auto rounded-2xl p-6" 
+                 style="border: 1px solid #1e1f22; background: rgba(255, 255, 255, 0.05);">
+                <h3 class="text-lg font-semibold text-white mb-6 text-center">
+                    Безкоштовна консультація
+                </h3>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-white mb-2">Ім'я та прізвище *</label>
+                        <input 
+                            type="text" 
+                            placeholder="Введіть ваше ім'я"
+                            class="w-full px-4 py-3 rounded-xl border text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors"
+                            style="background: transparent; border-color: #1e1f22; focus:border-color: #2E7CF6;"
+                        />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-white mb-2">Телефон *</label>
+                        <input 
+                            type="tel" 
+                            placeholder="+380 67 123 45 67"
+                            class="w-full px-4 py-3 rounded-xl border text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors"
+                            style="background: transparent; border-color: #1e1f22;"
+                        />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-white mb-2">Опишіть вашу ситуацію</label>
+                        <textarea 
+                            rows="4" 
+                            placeholder="Розкажіть детально про вашу ситуацію..."
+                            class="w-full px-4 py-3 rounded-xl border text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors resize-none"
+                            style="background: transparent; border-color: #1e1f22;"
+                        ></textarea>
+                    </div>
+                    <button 
+                        type="submit"
+                        class="w-full py-3 px-6 rounded-xl text-white font-medium transition-all hover:opacity-90"
+                        style="background-color: #2E7CF6;"
+                    >
+                        Отримати консультацію
+                    </button>
+                    <p class="text-xs text-center" style="color: #9aa3b2;">
+                        Натискаючи кнопку, ви погоджуєтесь з обробкою персональних даних
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

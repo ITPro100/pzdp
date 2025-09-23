@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 11 11 12; /* #0b0b0c */
+    --foreground: 245 247 250; /* #f5f7fa */
+    --card: 11 11 12;
+    --card-foreground: 245 247 250;
+    --popover: 11 11 12;
+    --popover-foreground: 245 247 250;
+    --primary: 46 124 246; /* #2E7CF6 */
+    --primary-foreground: 245 247 250;
+    --secondary: 30 31 34; /* #1e1f22 */
+    --secondary-foreground: 245 247 250;
+    --muted: 30 31 34;
+    --muted-foreground: 154 163 178; /* #9aa3b2 */
+    --accent: 30 31 34;
+    --accent-foreground: 245 247 250;
+    --destructive: 239 68 68;
+    --destructive-foreground: 245 247 250;
+    --border: 30 31 34; /* #1e1f22 */
+    --input: 30 31 34;
+    --ring: 46 124 246;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  /* Container utility following 21st.dev style */
+  .container {
+    @apply mx-auto max-w-[1200px] px-4 md:px-6;
+  }
+  
+  /* Section spacing */
+  .py-section {
+    @apply py-[4.5rem] md:py-[6.5rem];
+  }
+  
+  /* Typography utilities */
+  .text-display-1 {
+    @apply text-[clamp(28px,5vw,48px)] leading-tight tracking-[-0.02em];
+  }
+  
+  .text-display-2 {
+    @apply text-[clamp(22px,3.4vw,32px)] leading-tight;
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:bg-white/5;
+  }
+}

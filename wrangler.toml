@@ -1,0 +1,9 @@
+name = "pzdp-legal"
+compatibility_date = "2024-09-23"
+pages_build_output_dir = "out"
+
+[env.production]
+name = "pzdp-legal"
+
+[env.preview]  
+name = "pzdp-legal-preview"
