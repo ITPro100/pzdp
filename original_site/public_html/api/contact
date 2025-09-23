@@ -1,0 +1,105 @@
+<?php
+// Включаем отображение ошибок для отладки
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Устанавливаем заголовки
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
+
+// Обработка preflight запроса
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    exit(0);
+}
+
+// Логирование
+function logMessage($message) {
+    $logFile = '../telegram.log';
+    $timestamp = date('Y-m-d H:i:s');
+    file_put_contents($logFile, "[$timestamp] $message\n", FILE_APPEND);
+}
+
+try {
+    // Получаем данные
+    $input = file_get_contents('php://input');
+    $data = json_decode($input, true);
+    
+    logMessage("Received data: " . print_r($data, true));
+    
+    if (!$data) {
+        throw new Exception('No data received');
+    }
+    
+    // Проверяем наличие обязательных полей
+    if (empty($data['name']) || empty($data['phone'])) {
+        throw new Exception('Name and phone are required');
+    }
+
+    // Формируем сообщение
+    $message = "🆘 НОВИЙ ЛІД - ПРАВОВИЙ ЗАХИСТ!\n\n";
+    $message .= "👤 Ім'я: " . htmlspecialchars($data['name']) . "\n";
+    $message .= "📞 Телефон: " . htmlspecialchars($data['phone']) . "\n";
+    
+    if (!empty($data['problem_type'])) {
+        $message .= "🔍 Тип проблеми: " . htmlspecialchars($data['problem_type']) . "\n";
+    }
+    
+    if (!empty($data['problem_description'])) {
+        $message .= "📝 Опис проблеми: " . htmlspecialchars($data['problem_description']) . "\n";
+    }
+    
+    if (!empty($data['message'])) {
+        $message .= "💬 Повідомлення: " . htmlspecialchars($data['message']) . "\n";
+    }
+    
+    $message .= "\n🕐 Час: " . date('Y-m-d H:i:s') . "\n";
+    $message .= "🌐 Сторінка: " . $_SERVER['HTTP_REFERER'] . "\n\n";
+    $message .= "#новий_лід #влк #військове_право";
+
+    logMessage('Formatted message: ' . $message);
+
+    // Отправляем в Telegram
+    $botToken = '6888841841:AAHhXxXxXxXxXxXxXxXxXxXxXxXxXxXxX';
+    $chatId = '-1001234567890';
+
+    $url = "https://api.telegram.org/bot{$botToken}/sendMessage";
+    $params = [
+        'chat_id' => $chatId,
+        'text' => $message,
+        'parse_mode' => 'HTML'
+    ];
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    
+    logMessage("Telegram API response: " . $response);
+    
+    if ($httpCode !== 200) {
+        throw new Exception('Failed to send message to Telegram');
+    }
+    
+    curl_close($ch);
+    
+    // Возвращаем JSON ответ
+    echo json_encode([
+        'success' => true,
+        'message' => 'Повідомлення успішно відправлено'
+    ]);
+
+} catch (Exception $e) {
+    logMessage("Error: " . $e->getMessage());
+    
+    http_response_code(500);
+    echo json_encode([
+        'success' => false,
+        'error' => $e->getMessage()
+    ]);
+} 

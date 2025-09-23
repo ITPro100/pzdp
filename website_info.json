@@ -127,28 +127,167 @@
   },
   "content_structure": {
     "hero_section": {
-      "badge": "🛡️ Експерти з військового права",
-      "title": "Правовий Захист Дніпро", 
-      "subtitle": "Професійна правова допомога військовим",
-      "description": "Оскарження рішень ВЛК, незалежна оцінка здоров'я та повний спектр послуг військового права. Досягаємо результату в 87% справ завдяки професійному підходу та багаторічному досвіду.",
-      "cta_buttons": [
+      "title": "Ваша Перемога завдяки незалежній судово-медичній експертизі",
+      "subtitle": "Професійна правова допомога від компанії Правовий Захист. Юридичні послуги в Дніпрі.",
+      "main_cta": {
+        "text": "Дзвінок протягом 5 хвилин",
+        "action": "#contact",
+        "tracking": "InitiateCheckout event"
+      },
+      "background": {
+        "gradient": "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)",
+        "animation": "wave SVG animation"
+      }
+    },
+    "problems_section": {
+      "title": "З якими проблемами ви стикаєтесь?",
+      "cards": [
         {
-          "text": "Зателефонувати зараз",
-          "action": "tel:+380633094480",
-          "type": "primary"
+          "icon": "fas fa-ban",
+          "title": "Несправедливе рішення",
+          "description": "Некоректна оцінка стану здоров'я, ігнорування медичних висновків, заниження категорії придатності"
         },
         {
-          "text": "Безкоштовна консультація", 
-          "action": "https://t.me/pzdnipro",
-          "type": "secondary"
+          "icon": "fas fa-exclamation-triangle",
+          "title": "Порушені права", 
+          "description": "Ви відчуваєте несправедливість у рішенні ВЛК? Вас не вислухали? Не врахували всі обставини? Ми допоможемо відновити ваші права!"
+        },
+        {
+          "icon": "fas fa-question-circle",
+          "title": "Не знаєте як діяти",
+          "description": "Складна процедура оскарження, незрозумілі терміни, купа документів. Ми знаємо всі тонкощі і проведемо вас крок за кроком."
         }
       ]
     },
-    "statistics": {
-      "success_rate": "87%",
-      "clients_served": "500+",
-      "response_time": "24 години",
-      "experience": "7+ років"
+    "work_methods": {
+      "title": "Три зручних способи співпраці",
+      "methods": [
+        {
+          "icon": "fas fa-building",
+          "title": "В офісі (Дніпро)", 
+          "description": "Особиста зустріч, підписання документів, детальна консультація в комфортних умовах",
+          "cta": "Записатися на прийом"
+        },
+        {
+          "icon": "fas fa-laptop",
+          "title": "Дистанційно",
+          "description": "Весь процес онлайн: від консультації до результату. 80% наших угод - дистанційні",
+          "cta": "Почати онлайн"
+        },
+        {
+          "icon": "fas fa-users",
+          "title": "Через родичів",
+          "description": "Не можете особисто? Дружина, батьки або близькі можуть укласти договір від вашого імені",
+          "cta": "Дізнатися як",
+          "highlight": "border: 3px solid var(--accent-gold)"
+        }
+      ]
+    },
+    "timeline": {
+      "title": "6 кроків до успіху",
+      "steps": [
+        "Консультація з юристом",
+        "Збір необхідних документів", 
+        "Проведення судово-медичної експертизи",
+        "Підготовка до суду",
+        "Участь у судовому процесі", 
+        "Отримання позитивного рішення"
+      ]
+    },
+    "military_services": {
+      "title": "Наші послуги з військового права",
+      "services": [
+        {
+          "icon": "fas fa-user-md",
+          "title": "Оскарження рішень ВЛК та незалежна експертиза",
+          "description": "Професійна оцінка стану здоров'я з юридичною силою"
+        },
+        {
+          "icon": "fas fa-door-open", 
+          "title": "Звільнення з мобілізації чи контракту",
+          "description": "Законні підстави для припинення військової служби"
+        },
+        {
+          "icon": "fas fa-money-bill-wave",
+          "title": "Виплати для полонених, безвісти зниклих",
+          "amount": "від 100 тис. до 15 млн грн",
+          "description": "Допомога родинам загиблих та постраждалих"
+        },
+        {
+          "icon": "fas fa-exchange-alt",
+          "title": "Переведення до іншої частини чи ТЦК", 
+          "description": "Зміна місця служби за медичними показаннями"
+        },
+        {
+          "icon": "fas fa-undo",
+          "title": "Повернення \"бойових\"",
+          "description": "Успішний досвід сотень справ - знаємо як діяти"
+        },
+        {
+          "icon": "fas fa-medal",
+          "title": "Оформлення статусу УБД",
+          "description": "Учасник бойових дій - пільги та додаткові виплати"
+        },
+        {
+          "icon": "fas fa-shield-alt",
+          "title": "Захист від незаконних рішень командування",
+          "description": "Оскарження наказів, захист прав військовослужбовців"
+        }
+      ]
+    },
+    "video_reviews": {
+      "title": "Реальні історії наших клієнтів",
+      "subtitle": "Наші клієнти відкрито розповідають про свій досвід співпраці з нами. Реальні обличчя, реальні історії, реальні результати.",
+      "videos": [
+        {
+          "youtube_id": "oQq4HVqmhWo",
+          "title": "Відгуки наших клієнтів",
+          "result": "Реальні історії успіху",
+          "description": "Звертався до багатьох юристів, але всі відмовлялися братися за складний випадок. В Правовому Захисті не тільки взялися, але й домоглися позитивного результату."
+        },
+        {
+          "youtube_id": "2a6FdOxToMM",
+          "title": "Комплексний успішний кейс",
+          "result": "Виплати + Оскарження ВЛК + Переведення", 
+          "description": "Після поранення звертався до різних юридичних компаній, але всі відмовлялися братися за комплексний випадок."
+        },
+        {
+          "youtube_id": "OJOvZ3LPvl4",
+          "title": "Оскарження рішення ВЛК",
+          "result": "Успішне оскарження",
+          "description": "ВЛК визнала мене придатним, хоча мав серйозні проблеми зі здоров'ям. Звертався до різних юристів, але всі говорили, що оскаржити рішення ВЛК неможливо."
+        }
+      ]
+    },
+    "company_info": {
+      "official_registration": {
+        "primary_company": {
+          "name": "ТОВ \"ПРАВОВИЙ ЗАХИСТ ДНІПРО\"",
+          "edrpou": "45678449"
+        },
+        "secondary_company": {
+          "name": "ТОВ \"НЕЗАЛЕЖНЕ ЕКСПЕРТНО-КОНСУЛЬТАЦІЙНЕ БЮРО СУДОВО-МЕДИЧНИХ ЕКСПЕРТИЗ ТА ДОСЛІДЖЕНЬ\"",
+          "edrpou": "45482054"
+        }
+      },
+      "geography": {
+        "coverage": "Працюємо по всій Україні",
+        "regions": "24 області України", 
+        "remote_work": "80% угод - дистанційно",
+        "office_location": "м. Дніпро"
+      },
+      "statistics": {
+        "successful_cases": "1000+",
+        "experience_since": "2016 року",
+        "success_rate": "87% виграних справ",
+        "average_duration": "30-45 днів"
+      },
+      "schedule": {
+        "weekdays": "Пн-Пт: 9:00 - 18:00",
+        "saturday": "Сб: 10:00 - 15:00", 
+        "sunday": "Нд: вихідний",
+        "consultations": "24/7"
+      }
     },
     "services": [
       {
@@ -222,28 +361,92 @@
   "integrations": {
     "analytics": {
       "facebook_pixel": {
-        "id": "1240931484418829",
-        "events": ["PageView", "Lead"]
+        "primary_id": "1240931484418829",
+        "secondary_id": "1219168716318102", 
+        "events": [
+          "PageView",
+          "Lead",
+          "Contact", 
+          "ViewContent",
+          "InitiateCheckout"
+        ],
+        "tracking_setup": {
+          "forms": "Lead event на всі форми",
+          "phone_clicks": "Contact event",
+          "service_views": "ViewContent event",
+          "main_cta": "InitiateCheckout event"
+        }
+      },
+      "google_analytics": {
+        "ga4_id": "G-YT4KG6SBQJ",
+        "events": [
+          "form_submission",
+          "phone_click", 
+          "whatsapp_click",
+          "viber_click",
+          "telegram_click",
+          "video_play",
+          "scroll_depth",
+          "time_on_page"
+        ]
       }
     },
+    "telegram": {
+      "bot_integration": true,
+      "php_handler": "send_telegram.php",
+      "notification_format": "🆘 НОВИЙ ЛІД - ПРАВОВИЙ ЗАХИСТ",
+      "required_fields": ["name", "phone"],
+      "optional_fields": ["problem", "message"],
+      "error_handling": "Fallback to phone number display"
+    },
     "lead_capture": {
-      "telegram_integration": true,
-      "form_validation": "React Hook Form + Zod",
-      "api_endpoint": "/api/contact"
+      "multistep_forms": true,
+      "exit_intent_popup": true,
+      "contact_widget": true,
+      "form_validation": "Client-side + server-side",
+      "api_endpoint": "send_telegram.php"
     }
   },
   "original_assets": {
     "archive_source": "/home/user/webapp/original_site/public_html",
     "extracted_from": "pz.dp.ua.tar",
     "key_files": {
-      "index.html": "Main page with original styling",
+      "index.html": "Main page with original styling and complete functionality",
       "css/forms.css": "Form styling and validation",
-      "send_telegram.php": "Telegram integration script"
+      "send_telegram.php": "Telegram integration script - CRITICAL!",
+      "favicon-32x32.png": "Company logo"
     },
-    "popup_system": {
-      "exit_intent": true,
-      "consultation_booking": true,
-      "telegram_notifications": true
+    "critical_features": {
+      "popup_system": {
+        "exit_intent_popup": {
+          "trigger": "mouseleave на верх сторінки",
+          "content": "Безкоштовна консультація форма",
+          "telegram_integration": true,
+          "one_time_show": true
+        },
+        "consultation_popups": {
+          "multistep_form": "3 кроки з прогрес-баром",
+          "conditional_logic": "Різні питання залежно від відповіді",
+          "required_validation": true
+        }
+      },
+      "contact_widget": {
+        "position": "fixed bottom-right",
+        "toggle_button": "круглий з bounce анімацією",
+        "dropdown_menu": {
+          "phone": "+38 063 309 44 80",
+          "whatsapp": "https://wa.me/380633094480",
+          "viber": "viber://chat?number=380633094480",
+          "telegram": "https://t.me/+380633094480",
+          "signal": "https://signal.me/#p/+380633094480"
+        }
+      },
+      "form_handling": {
+        "telegram_notifications": true,
+        "error_fallback": "Показ номера телефону при помилці",
+        "success_feedback": "Toast повідомлення",
+        "loading_states": "Spinner при відправці"
+      }
     }
   },
   "development_workflow": {
@@ -265,35 +468,93 @@
       "config_files": ["_redirects", "_headers"]
     }
   },
-  "next_steps": {
-    "pending_integrations": [
-      {
-        "description": "Popup consultation booking system",
-        "source": "Original pz.dp.ua site",
-        "features": ["Exit intent popup", "Telegram integration", "Lead capture forms"]
+  "critical_missing_elements": {
+    "popup_systems": {
+      "exit_intent_popup": {
+        "status": "MISSING - КРИТИЧНО!",
+        "trigger": "mouseleave event на clientY <= 0",
+        "form_fields": ["name", "phone", "message"],
+        "telegram_integration": "send_telegram.php",
+        "tracking": "Facebook Pixel Lead event"
       },
-      {
-        "description": "Messenger widget enhancement", 
-        "requirements": ["Contact info update", "All messengers integration", "Widget positioning"]
-      },
-      {
-        "description": "Contact information sync",
-        "source": "Current pz.dp.ua site",
-        "scope": "Complete contact details update"
+      "consultation_forms": {
+        "status": "MISSING - КРИТИЧНО!",
+        "type": "multistep form з прогрес-баром",
+        "steps": 3,
+        "conditional_logic": true
       }
+    },
+    "telegram_integration": {
+      "status": "MISSING - БЛОКУЮЧИЙ!",
+      "file": "send_telegram.php",
+      "functionality": "Відправка повідомлень у Telegram чат",
+      "format": "🆘 НОВИЙ ЛІД - ПРАВОВИЙ ЗАХИСТ + деталі"
+    },
+    "facebook_pixel_events": {
+      "status": "ЧАСТКОВО MISSING",
+      "missing_events": ["Contact", "ViewContent", "InitiateCheckout"],
+      "required_tracking": "Всі форми, кліки телефону, перегляди послуг"
+    },
+    "contact_widget": {
+      "status": "MISSING", 
+      "position": "fixed bottom-right",
+      "functionality": "toggle меню з 5 опціями контакту",
+      "animation": "bounce effect"
+    },
+    "mobile_menu_enhancements": {
+      "status": "ПОТРЕБУЄ ПОКРАЩЕНЬ",
+      "missing": "fade логотипу, красива кнопка телефону, 4 круглі іконки мессенджерів"
+    }
+  },
+  "implementation_priority": {
+    "critical_level_1": [
+      "Telegram integration (send_telegram.php)",
+      "Exit intent popup з формою", 
+      "Facebook Pixel events (всі типи)",
+      "Правильна кольорова палітра (navy blue)"
     ],
-    "technical_improvements": [
-      "Production Tailwind CSS build",
-      "Image optimization", 
-      "SEO enhancements",
-      "Performance optimization"
+    "high_level_2": [
+      "Contact widget з мессенджерами",
+      "Multistep форми консультацій",
+      "Google Analytics events",
+      "Мобільне меню покращення"
+    ],
+    "medium_level_3": [
+      "SEO мета-теги українською",
+      "Schema.org markup для LegalService",
+      "Performance оптимізація", 
+      "Cross-browser тестування"
     ]
   },
+  "seo_requirements": {
+    "meta_tags": {
+      "title": "Правовий Захист - Юридична компанія в Дніпрі",
+      "description": "Професійна правова допомога від компанії Правовий Захист. Юридичні послуги в Дніпрі.",
+      "keywords": "юридична компанія, правова допомога, Дніпро, адвокат, юрист, військове право, ВЛК, судмедекспертиза"
+    },
+    "open_graph": {
+      "title": "Правовий Захист - Юридична компанія в Дніпрі",
+      "description": "Професійна правова допомога від компанії Правовий Захист. Юридичні послуги в Дніпрі.",
+      "url": "https://pz.dp.ua",
+      "image": "https://pz.dp.ua/og-image.jpg",
+      "site_name": "Правовий Захист"
+    },
+    "schema_org": {
+      "type": "LegalService",
+      "name": "Правовий Захист Дніпро",
+      "address": "Дніпро, UA",
+      "telephone": "+380633094480",
+      "description": "Незалежна судмедекспертиза та юридичні послуги по всій Україні"
+    }
+  },
   "success_metrics": {
-    "design_quality": "Premium SaaS level",
-    "performance": "Zero console errors",
-    "responsiveness": "Perfect mobile experience",
+    "design_quality": "Premium SaaS level 2025",
+    "functionality": "100% original site features implemented",
+    "integrations": "Telegram + Facebook Pixel + Google Analytics",
+    "performance": "Zero console errors + fast loading",
+    "responsiveness": "Perfect mobile experience with proper menu",
     "accessibility": "Modern web standards compliant",
-    "user_feedback": "Modern and professional appearance requested by client"
+    "conversion_optimization": "Exit popups + contact widgets + form validation",
+    "user_feedback": "Modern SaaS design with all business-critical functionality"
   }
 }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Запит на консультацію — Правовий Захист Дніпро</title>
+    <!-- Telegram WebApp SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Запит на консультацію</h1>
+        <p class="lead">Заповніть форму нижче, щоб наші юристи могли з вами зв'язатися.</p>
+        <form id="leadForm">
+            <div class="form-group">
+                <label for="service">Оберіть послугу</label>
+                <select id="service" required>
+                    <option value="" disabled selected>— Оберіть категорію —</option>
+                    <option value="mobilization">Мобілізаційне та військове право</option>
+                    <option value="criminal">Кримінальне право</option>
+                    <option value="tax">Податкове право</option>
+                    <option value="family">Сімейне право</option>
+                    <option value="civil">Цивільне право</option>
+                    <option value="administrative">Адміністративне право</option>
+                    <option value="economic">Господарське право</option>
+                    <option value="corporate">Корпоративне право</option>
+                    <option value="white_collar">White Collar Crime</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="description">Опишіть вашу ситуацію</label>
+                <textarea id="description" rows="4" placeholder="Напишіть коротко вашу проблему" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="name">Ваше ім’я</label>
+                <input id="name" type="text" placeholder="Введіть ваше ім’я" required />
+            </div>
+            <div class="form-group">
+                <label for="phone">Номер телефону</label>
+                <input id="phone" type="tel" placeholder="+380XXXXXXXXX" required />
+            </div>
+            <div class="form-group">
+                <label for="city">Місто</label>
+                <input id="city" type="text" placeholder="Наприклад, Дніпро" required />
+            </div>
+            <div class="form-group">
+                <label for="preferred_time">Зручний час для дзвінка</label>
+                <select id="preferred_time" required>
+                    <option value="any" selected>Будь‑коли</option>
+                    <option value="morning">Ранок (08:00–12:00)</option>
+                    <option value="afternoon">День (12:00–17:00)</option>
+                    <option value="evening">Вечір (17:00–21:00)</option>
+                </select>
+            </div>
+            <button type="submit" id="submitBtn">Надіслати</button>
+        </form>
+        <p class="privacy">Натискаючи «Надіслати», ви погоджуєтесь на обробку ваших персональних даних.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
