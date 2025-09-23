@@ -1,0 +1,81 @@
+🚀 СОЗДАЙ САЙТ "ПРАВОВИЙ ЗАХИСТ ДНІПРО" - PREMIUM SAAS 2025
+
+📋 ЗАДАЧА: Полнофункциональный сайт украинского юридического агентства со специализацией на военном праве. Уровень: Premium SaaS 2025 (Stripe/Linear/Vercel standards).
+
+🔥 КРИТИЧНО - ПРОЧИТАЙ ДОКУМЕНТАЦИЮ СНАЧАЛА!
+Изучи файлы: DEEP_AGENT_CHECKLIST.md, CRITICAL_ELEMENTS_ANALYSIS.md, website_info.json
+Текущий сайт: https://72f95964.pzdp-legal.pages.dev
+
+⚡ ПРИОРИТЕТ #1 - TELEGRAM INTEGRATION (БЕЗ ЭТОГО САЙТ НЕ РАБОТАЕТ!)
+Создать send_telegram.php:
+- Token: 7980366385:AAEHsomQxeZQ_sM-OBOK-NrVPgUAhhkABno  
+- Chat IDs: 5849303048, 6418581124
+- Формат: 🔔 НОВЫЙ ЛИД - ПРАВОВЫЙ ЗАЩИТ! + данные формы
+
+🎨 ЦВЕТА - СТРОГО Navy Blue + Gold:
+- Primary: #1e3a8a (navy blue)
+- Secondary: #3b82f6 (light blue)  
+- Accent: #f59e0b (gold)
+- НЕ ИСПОЛЬЗОВАТЬ яркие цвета!
+
+📊 FACEBOOK PIXEL - ОБЯЗАТЕЛЬНО!
+IDs: 1240931484418829, 1219168716318102
+События: Lead (формы), Contact (телефон), ViewContent (услуги), InitiateCheckout (главная CTA)
+
+⚡ EXIT INTENT POPUP - КРИТИЧНО ДЛЯ ЛИДОВ!
+Триггер: mouseleave при clientY <= 0
+Форма: имя + телефон + сообщение → send_telegram.php
+
+📱 МОБИЛЬНОЕ МЕНЮ - КЛЮЧЕВЫЕ ФИЧИ:
+1. Логотип ИСЧЕЗАЕТ при открытии
+2. Большая кнопка телефона +38 063 309 44 80
+3. 4 КРУГЛЫЕ иконки: WhatsApp, Viber, Telegram, Signal
+4. Slide-in анимация с backdrop blur
+
+📋 КОНТЕНТ:
+Hero: "Ваша Перемога завдяки незалежній судово-медичній експертизі"
+Subtitle: "Професійна правова допомога від компанії Правовий Захист. Юридичні послуги в Дніпрі."
+CTA: "Дзвінок протягом 5 хвилин"
+
+Секции: Проблемы (3), Способы работы (3), Timeline (6 шагов), Военные услуги (7), Видео отзывы (3 YouTube: oQq4HVqmhWo, 2a6FdOxToMM, OJOvZ3LPvl4)
+
+📞 КОНТАКТЫ:
+Телефон: +38 063 309 44 80
+Email: info@pz.dp.ua
+ТОВ "ПРАВОВИЙ ЗАХИСТ ДНІПРО" (ЄДРПОУ: 45678449)
+Статистика: 1000+ дел, 87% успех, опыт с 2016
+
+📞 CONTACT WIDGET (fixed bottom-right):
+5 кнопок: Телефон, WhatsApp, Viber, Telegram, Signal
+Bounce анимация, dropdown меню
+
+📋 ФОРМЫ - ОБЯЗАТЕЛЬНО МУЛЬТИСТЕП!
+3 шага: Выбор проблемы → Описание → Контакты
+Progress bar, auto-advance, валидация, Telegram отправка
+
+📊 GOOGLE ANALYTICS: G-YT4KG6SBQJ
+События: form_submission, phone_click, messenger_clicks, video_play, scroll_depth, time_on_page
+
+🎨 ДИЗАЙН 2025:
+Glass morphism, subtle shadows, smooth transitions (0.3s), hover трансформации, Inter font, responsive typography
+
+🔧 ТЕХНИЧЕСКИЕ:
+Next.js: output: 'export', trailingSlash: true
+SEO украинский: keywords "юридична компанія, військове право, ВЛК, Дніпро"
+
+❌ НЕ ДЕЛАТЬ:
+- Яркие цвета (только navy blue + gold!)
+- Забыть Telegram integration (формы не работают!)
+- Пропустить Facebook Pixel events
+- Игнорировать exit popup (потеря 30% лидов)
+- Простые формы (обязательно мультистеп!)
+- Забыть мобильные анимации
+
+✅ ПОРЯДОК:
+1. send_telegram.php + Facebook Pixel + Exit popup + Navy blue цвета
+2. Contact widget + Мультистеп формы + Мобильное меню + GA events  
+3. SEO + Error handling + Performance + Accessibility
+
+🎯 ЦЕЛЬ: Conversion-машина с премиум дизайном для украинского юридического агентства!
+
+ФУНКЦИОНАЛЬНОСТЬ > ДИЗАЙН > АНИМАЦИИ. Без рабочих форм = провал!
