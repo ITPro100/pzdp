@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правовий Захист Дніпро | Військове право</title>
+    <meta name="description" content="Професійна правова допомога військовим у Дніпрі. Оскарження рішень ВЛК, незалежна оцінка здоров'я, військове право.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1e3a8a',
+                        'secondary-blue': '#3b82f6',
+                        'accent-gold': '#f59e0b',
+                        'success-green': '#10b981',
+                        'text-dark': '#1f2937',
+                        'text-gray': '#6b7280',
+                        'bg-light': '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+        }
+        
+        .logo-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        .logo-fade {
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .menu-messengers {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .messenger-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+        
+        .messenger-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .telegram-btn { background: #0088cc; }
+        .whatsapp-btn { background: #25d366; }
+        .viber-btn { background: #7c3aed; }
+        .signal-btn { background: #2e86ab; }
+        
+        .phone-button {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            border: 2px solid #f59e0b;
+            box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+        }
+        
+        .phone-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-hidden {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-text-dark min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-gradient-to-r from-primary-blue to-secondary-blue text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Title (Desktop & Mobile) -->
+                <div class="flex items-center logo-content">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 mr-3 flex items-center justify-center bg-white rounded-lg">
+                            <i class="fas fa-shield-alt text-primary-blue text-xl"></i>
+                        </div>
+                        <div class="logo-text">
+                            <div class="text-lg font-bold">Правовий Захист</div>
+                            <div class="text-xs opacity-80 mobile-hidden">Дніпро</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="hover:text-accent-gold transition-colors">Послуги</a>
+                    <a href="#about" class="hover:text-accent-gold transition-colors">Про нас</a>
+                    <a href="#contacts" class="hover:text-accent-gold transition-colors">Контакти</a>
+                </nav>
+
+                <!-- Desktop Phone -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="tel:+380633094480" class="flex items-center space-x-2 text-lg font-semibold hover:text-accent-gold transition-colors">
+                        <i class="fas fa-phone"></i>
+                        <span>063 309 44 80</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 z-50 bg-white">
+        <div class="flex flex-col h-full">
+            <!-- Mobile Menu Header -->
+            <div class="bg-gradient-to-r from-primary-blue to-secondary-blue text-white p-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center opacity-0 logo-content-mobile">
+                        <div class="w-10 h-10 mr-3 flex items-center justify-center bg-white rounded-lg">
+                            <i class="fas fa-shield-alt text-primary-blue text-xl"></i>
+                        </div>
+                        <div class="text-lg font-bold">Правовий Захист</div>
+                    </div>
+                    <button id="mobile-menu-close" class="p-2 rounded-lg hover:bg-white/10 transition-colors">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Content -->
+            <div class="flex-1 p-6 space-y-6">
+                <!-- Phone Button -->
+                <a href="tel:+380633094480" 
+                   class="phone-button block w-full text-center py-4 px-6 rounded-xl text-white font-bold text-lg transition-all">
+                    <i class="fas fa-phone mr-3"></i>
+                    063 309 44 80
+                </a>
+
+                <!-- Messengers -->
+                <div>
+                    <p class="text-text-gray text-center mb-4">Або напишіть нам:</p>
+                    <div class="menu-messengers">
+                        <a href="https://t.me/+380633094480" class="messenger-btn telegram-btn" target="_blank">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="https://wa.me/380633094480" class="messenger-btn whatsapp-btn" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="viber://chat?number=380633094480" class="messenger-btn viber-btn">
+                            <i class="fab fa-viber"></i>
+                        </a>
+                        <a href="https://signal.me/#p/+380633094480" class="messenger-btn signal-btn" target="_blank">
+                            <i class="fas fa-comment-dots"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <nav class="space-y-4">
+                    <a href="#services" class="block py-3 text-lg font-medium text-text-dark border-b border-gray-200">
+                        <i class="fas fa-gavel mr-3 text-primary-blue"></i>
+                        Наші послуги
+                    </a>
+                    <a href="#about" class="block py-3 text-lg font-medium text-text-dark border-b border-gray-200">
+                        <i class="fas fa-users mr-3 text-primary-blue"></i>
+                        Про компанію
+                    </a>
+                    <a href="#contacts" class="block py-3 text-lg font-medium text-text-dark border-b border-gray-200">
+                        <i class="fas fa-map-marker-alt mr-3 text-primary-blue"></i>
+                        Контакти
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 sm:py-32 bg-gradient-to-br from-bg-light to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center px-4 py-2 text-sm bg-primary-blue/10 border border-primary-blue/20 rounded-full text-primary-blue mb-8">
+                🛡️ Експерти з військового права
+            </div>
+            
+            <h1 class="text-4xl sm:text-6xl font-bold tracking-tight mb-6">
+                <span class="text-primary-blue">Правовий Захист</span>
+                <span class="text-accent-gold">Дніпро</span>
+            </h1>
+            
+            <p class="text-xl sm:text-2xl text-text-gray mb-8 max-w-3xl mx-auto">
+                Професійна правова допомога військовим
+            </p>
+            
+            <p class="text-lg text-text-gray mb-10 max-w-2xl mx-auto">
+                Оскарження рішень ВЛК, незалежна оцінка здоров'я та повний спектр послуг військового права з 87% успіху.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+380633094480" 
+                   class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-primary-blue to-secondary-blue hover:from-secondary-blue hover:to-primary-blue rounded-xl transition-all transform hover:scale-105 shadow-lg">
+                    📞 Зателефонувати зараз
+                </a>
+                <a href="https://t.me/pzdnipro" 
+                   class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-primary-blue border-2 border-primary-blue hover:bg-primary-blue hover:text-white rounded-xl transition-all">
+                    📝 Записатися на консультацію
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-primary-blue mb-4">Чому обирають нас</h2>
+                <p class="text-xl text-text-gray">Професійний підхід та максимальний результат для кожного клієнта</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-bg-light rounded-xl border hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-gradient-to-r from-primary-blue to-secondary-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-balance-scale text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-primary-blue">Оскарження рішень ВЛК</h3>
+                    <p class="text-text-gray">Професійне оскарження негативних рішень військово-лікарської комісії з високим відсотком успіху.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-bg-light rounded-xl border hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-gradient-to-r from-success-green to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-md text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-primary-blue">Незалежна оцінка здоров'я</h3>
+                    <p class="text-text-gray">Експертна медична оцінка стану здоров'я для підтвердження професійних захворювань.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-bg-light rounded-xl border hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-gradient-to-r from-accent-gold to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-primary-blue">Швидке вирішення</h3>
+                    <p class="text-text-gray">Оперативне ведення справ та максимально швидке досягнення результату за 24 години.</p>
+                </div>
+                
+                <div class="text-center p-6 bg-bg-light rounded-xl border hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-primary-blue">Досвідчені юристи</h3>
+                    <p class="text-text-gray">Команда спеціалістів з багаторічним досвідом у сфері військового права.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof Section -->
+    <section class="py-20 bg-gradient-to-r from-primary-blue to-secondary-blue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Наші результати</h2>
+                <p class="text-xl opacity-90">Цифри, які говорять про нашу ефективність</p>
+            </div>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="text-4xl sm:text-5xl font-bold text-accent-gold mb-2">87%</div>
+                    <div class="text-lg font-semibold mb-1">Успішних справ</div>
+                    <div class="opacity-75">Виграних оскаржень ВЛК</div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-4xl sm:text-5xl font-bold text-accent-gold mb-2">500+</div>
+                    <div class="text-lg font-semibold mb-1">Задоволених клієнтів</div>
+                    <div class="opacity-75">За 7 років роботи</div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-4xl sm:text-5xl font-bold text-accent-gold mb-2">24</div>
+                    <div class="text-lg font-semibold mb-1">Години на оскарження</div>
+                    <div class="opacity-75">Максимальний термін</div>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-4xl sm:text-5xl font-bold text-accent-gold mb-2">7+</div>
+                    <div class="text-lg font-semibold mb-1">Років досвіду</div>
+                    <div class="opacity-75">У військовому праві</div>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="inline-flex items-center px-4 py-2 bg-success-green/20 border border-success-green rounded-full text-success-green">
+                    ✅ Ліцензована юридична фірма
+                </span>
+                <span class="inline-flex items-center px-4 py-2 bg-success-green/20 border border-success-green rounded-full text-success-green">
+                    ✅ Член Адвокатської палати
+                </span>
+                <span class="inline-flex items-center px-4 py-2 bg-success-green/20 border border-success-green rounded-full text-success-green">
+                    ✅ Спеціалізація: військове право
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-primary-blue">Готові захистити ваші права?</h2>
+            <p class="text-xl text-text-gray mb-8">
+                Не чекайте - кожен день має значення у правових питаннях. Отримайте професійну допомогу вже сьогодні.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+380633094480" 
+                   class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-primary-blue to-secondary-blue hover:from-secondary-blue hover:to-primary-blue rounded-xl transition-all transform hover:scale-105 shadow-lg">
+                    📞 Зателефонувати зараз
+                </a>
+                <a href="https://t.me/pzdnipro" 
+                   class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-primary-blue border-2 border-primary-blue hover:bg-primary-blue hover:text-white rounded-xl transition-all">
+                    💬 Написати в месенджер
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacts" class="py-12 bg-text-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 mr-3 flex items-center justify-center bg-accent-gold rounded-lg">
+                        <i class="fas fa-shield-alt text-primary-blue text-xl"></i>
+                    </div>
+                    <div class="text-xl font-bold">Правовий Захист Дніпро</div>
+                </div>
+                
+                <div class="text-gray-400 mb-6">
+                    <p>Професійна правова допомога військовим</p>
+                    <p class="mt-2 flex items-center justify-center flex-wrap gap-4">
+                        <a href="tel:+380633094480" class="text-accent-gold hover:text-yellow-400 transition-colors">
+                            📞 +38 (063) 309-44-80
+                        </a>
+                        <span class="hidden sm:inline">|</span>
+                        <a href="https://t.me/pzdnipro" class="text-accent-gold hover:text-yellow-400 transition-colors">
+                            💬 Telegram
+                        </a>
+                    </p>
+                </div>
+                
+                <div class="text-sm text-gray-500 pt-6 border-t border-gray-700">
+                    © 2024 Правовий Захист Дніпро. Всі права захищені.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const logoContent = document.querySelector('.logo-content');
+        const logoContentMobile = document.querySelector('.logo-content-mobile');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Fade out header logo and fade in mobile menu logo
+            logoContent.style.opacity = '0';
+            setTimeout(() => {
+                logoContentMobile.style.opacity = '1';
+            }, 150);
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            // Fade in header logo and fade out mobile menu logo  
+            logoContentMobile.style.opacity = '0';
+            setTimeout(() => {
+                logoContent.style.opacity = '1';
+            }, 150);
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+        // Close mobile menu when clicking on navigation links
+        document.querySelectorAll('#mobile-menu a[href^="#"]').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
