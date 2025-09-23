@@ -1,0 +1,299 @@
+{
+  "project": {
+    "name": "Правовий Захист Дніпро",
+    "type": "Legal Services Website",
+    "domain": "pz.dp.ua",
+    "specialization": "Ukrainian Military Law",
+    "target_audience": "Military personnel, veterans, legal service seekers in Ukraine",
+    "language": "Ukrainian (uk)",
+    "status": "Production Ready"
+  },
+  "deployment": {
+    "platform": "Cloudflare Pages",
+    "project_name": "pzdp-legal",
+    "current_url": "https://a3594c4f.pzdp-legal.pages.dev",
+    "permanent_url": "https://genspark-ai-developer.pzdp-legal.pages.dev",
+    "build_command": "npm run build",
+    "output_directory": "out",
+    "deployment_type": "Static Site Generation"
+  },
+  "design_system": {
+    "style": "Premium SaaS 2025",
+    "inspiration": "Stripe, Linear, Vercel level quality",
+    "color_palette": {
+      "primary": {
+        "navy_blue": "#1e3a8a",
+        "navy_variants": {
+          "50": "#f8fafc",
+          "100": "#f1f5f9", 
+          "200": "#e2e8f0",
+          "300": "#cbd5e1",
+          "400": "#94a3b8",
+          "500": "#64748b",
+          "600": "#475569",
+          "700": "#334155",
+          "800": "#1e293b",
+          "900": "#0f172a",
+          "950": "#020617"
+        }
+      },
+      "accent": {
+        "gold": "#f59e0b",
+        "gold_variants": {
+          "50": "#fffbeb",
+          "100": "#fef3c7",
+          "200": "#fde68a",
+          "300": "#fcd34d",
+          "400": "#fbbf24",
+          "500": "#f59e0b",
+          "600": "#d97706"
+        }
+      },
+      "success": {
+        "green": "#10b981",
+        "green_600": "#059669"
+      },
+      "neutral": {
+        "white": "#ffffff",
+        "black": "#1f2937"
+      }
+    },
+    "typography": {
+      "font_family": "Inter",
+      "weights": [300, 400, 500, 600, 700, 800],
+      "sizes": {
+        "hero": "clamp(40px, 8vw, 80px)",
+        "section_title": "48px",
+        "subtitle": "24px",
+        "body": "16px"
+      }
+    },
+    "effects": {
+      "glass_morphism": true,
+      "backdrop_blur": "20px",
+      "shadow_system": ["xs", "sm", "md", "lg", "xl", "2xl"],
+      "gradients": {
+        "primary": "linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%)",
+        "gold": "linear-gradient(135deg, #fbbf24 0%, #d97706 100%)",
+        "glass": "linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)"
+      }
+    }
+  },
+  "technology_stack": {
+    "frontend": {
+      "framework": "Next.js 14",
+      "router": "App Router",
+      "language": "TypeScript",
+      "styling": "Tailwind CSS + Custom CSS",
+      "components": "shadcn/ui (in development version)",
+      "icons": "Font Awesome 6.4.0"
+    },
+    "build_tools": {
+      "bundler": "Next.js built-in",
+      "package_manager": "npm",
+      "deployment_tool": "Wrangler CLI",
+      "static_export": true
+    },
+    "performance": {
+      "load_time": "7.32s",
+      "console_errors": 0,
+      "animations": "60fps optimized",
+      "mobile_first": true
+    }
+  },
+  "contact_information": {
+    "phone": {
+      "primary": "+380633094480",
+      "formatted": "+38 (063) 309-44-80",
+      "display": "063 309 44 80"
+    },
+    "messengers": {
+      "telegram": {
+        "chat_url": "https://t.me/+380633094480",
+        "channel": "https://t.me/pzdnipro"
+      },
+      "whatsapp": {
+        "url": "https://wa.me/380633094480"
+      },
+      "viber": {
+        "url": "viber://chat?number=380633094480"
+      },
+      "signal": {
+        "url": "https://signal.me/#p/+380633094480"
+      }
+    },
+    "email": "info@pz.dp.ua",
+    "location": "Дніпро, Україна"
+  },
+  "content_structure": {
+    "hero_section": {
+      "badge": "🛡️ Експерти з військового права",
+      "title": "Правовий Захист Дніпро", 
+      "subtitle": "Професійна правова допомога військовим",
+      "description": "Оскарження рішень ВЛК, незалежна оцінка здоров'я та повний спектр послуг військового права. Досягаємо результату в 87% справ завдяки професійному підходу та багаторічному досвіду.",
+      "cta_buttons": [
+        {
+          "text": "Зателефонувати зараз",
+          "action": "tel:+380633094480",
+          "type": "primary"
+        },
+        {
+          "text": "Безкоштовна консультація", 
+          "action": "https://t.me/pzdnipro",
+          "type": "secondary"
+        }
+      ]
+    },
+    "statistics": {
+      "success_rate": "87%",
+      "clients_served": "500+",
+      "response_time": "24 години",
+      "experience": "7+ років"
+    },
+    "services": [
+      {
+        "title": "Оскарження рішень ВЛК",
+        "description": "Професійне оскарження негативних рішень військово-лікарської комісії з високим відсотком успіху та мінімальними термінами розгляду.",
+        "icon": "fas fa-balance-scale"
+      },
+      {
+        "title": "Незалежна медична оцінка",
+        "description": "Експертна медична оцінка стану здоров'я для підтвердження професійних захворювань та отримання відповідних пільг.",
+        "icon": "fas fa-user-md"
+      },
+      {
+        "title": "Швидке вирішення справ",
+        "description": "Оперативне ведення справ та максимально швидке досягнення результату. Реагуємо на звернення протягом 24 годин.",
+        "icon": "fas fa-clock"
+      },
+      {
+        "title": "Досвідчена команда",
+        "description": "Команда спеціалістів з багаторічним досвідом у сфері військового права та глибоким розумінням специфіки галузі.",
+        "icon": "fas fa-users"
+      }
+    ],
+    "credentials": [
+      "Ліцензована юридична фірма",
+      "Член Адвокатської палати України", 
+      "Спеціалізація: військове право"
+    ]
+  },
+  "mobile_menu": {
+    "type": "slide_in_right",
+    "features": {
+      "logo_fade_animation": true,
+      "phone_button": {
+        "style": "gradient with gold border",
+        "prominence": "primary"
+      },
+      "messenger_grid": {
+        "layout": "2x2",
+        "style": "rounded icons with labels"
+      },
+      "navigation": {
+        "style": "icon + text",
+        "icons": true
+      }
+    },
+    "animations": {
+      "entrance": "slide from right",
+      "backdrop": "blur overlay",
+      "logo_transition": "fade out/in"
+    }
+  },
+  "user_experience": {
+    "design_level": "Premium SaaS 2025",
+    "animations": {
+      "type": "micro-interactions",
+      "performance": "60fps optimized",
+      "triggers": ["hover", "scroll", "click"]
+    },
+    "accessibility": {
+      "focus_states": true,
+      "keyboard_navigation": true,
+      "screen_reader_support": true
+    },
+    "responsiveness": {
+      "approach": "mobile_first",
+      "breakpoints": ["480px", "768px", "1024px", "1280px"],
+      "test_viewport": "390x844"
+    }
+  },
+  "integrations": {
+    "analytics": {
+      "facebook_pixel": {
+        "id": "1240931484418829",
+        "events": ["PageView", "Lead"]
+      }
+    },
+    "lead_capture": {
+      "telegram_integration": true,
+      "form_validation": "React Hook Form + Zod",
+      "api_endpoint": "/api/contact"
+    }
+  },
+  "original_assets": {
+    "archive_source": "/home/user/webapp/original_site/public_html",
+    "extracted_from": "pz.dp.ua.tar",
+    "key_files": {
+      "index.html": "Main page with original styling",
+      "css/forms.css": "Form styling and validation",
+      "send_telegram.php": "Telegram integration script"
+    },
+    "popup_system": {
+      "exit_intent": true,
+      "consultation_booking": true,
+      "telegram_notifications": true
+    }
+  },
+  "development_workflow": {
+    "git_repository": "https://github.com/ITPro100/pzdp",
+    "branch": "genspark_ai_developer",
+    "commit_policy": "mandatory after each change",
+    "pull_request": "required for all modifications",
+    "current_pr": "https://github.com/ITPro100/pzdp/compare/genspark_ai_developer?expand=1"
+  },
+  "file_structure": {
+    "current_files": {
+      "simple.html": "Basic version for initial deployment",
+      "improved.html": "Version with correct colors and mobile menu",
+      "modern-saas.html": "Premium 2025 SaaS-level design (CURRENT)"
+    },
+    "build_output": {
+      "directory": "out/",
+      "main_file": "index.html",
+      "config_files": ["_redirects", "_headers"]
+    }
+  },
+  "next_steps": {
+    "pending_integrations": [
+      {
+        "description": "Popup consultation booking system",
+        "source": "Original pz.dp.ua site",
+        "features": ["Exit intent popup", "Telegram integration", "Lead capture forms"]
+      },
+      {
+        "description": "Messenger widget enhancement", 
+        "requirements": ["Contact info update", "All messengers integration", "Widget positioning"]
+      },
+      {
+        "description": "Contact information sync",
+        "source": "Current pz.dp.ua site",
+        "scope": "Complete contact details update"
+      }
+    ],
+    "technical_improvements": [
+      "Production Tailwind CSS build",
+      "Image optimization", 
+      "SEO enhancements",
+      "Performance optimization"
+    ]
+  },
+  "success_metrics": {
+    "design_quality": "Premium SaaS level",
+    "performance": "Zero console errors",
+    "responsiveness": "Perfect mobile experience",
+    "accessibility": "Modern web standards compliant",
+    "user_feedback": "Modern and professional appearance requested by client"
+  }
+}
