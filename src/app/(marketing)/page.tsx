@@ -2,6 +2,7 @@ import { Hero } from "@/components/blocks/hero"
 import { Features } from "@/components/blocks/features"
 import { Proof } from "@/components/blocks/proof"
 import { CTA } from "@/components/blocks/cta"
+import { Team } from "@/components/blocks/team"
 import { Shield, Scale, Clock, Users } from "lucide-react"
 
 export default function HomePage() {
@@ -35,6 +36,74 @@ export default function HomePage() {
     { value: "7+", label: "Років досвіду", description: "У військовому праві" },
   ]
 
+  // Команда Правовий Захист
+  const legalTeam = [
+    {
+      name: "Іванов Олексій Петрович",
+      position: "Старший партнер",
+      image: "/team/legal-1.jpg",
+      specialization: "Військове право, оскарження рішень ВЛК"
+    },
+    {
+      name: "Коваленко Марина Сергіївна",
+      position: "Адвокат",
+      image: "/team/legal-2.jpg",
+      specialization: "Адміністративне право, захист прав військовослужбовців"
+    },
+    {
+      name: "Петренко Дмитро Володимирович",
+      position: "Юрист-консультант",
+      image: "/team/legal-3.jpg",
+      specialization: "Консультації з військового законодавства"
+    },
+    {
+      name: "Шевченко Ірина Анатоліївна",
+      position: "Провідний юрист",
+      image: "/team/legal-4.jpg",
+      specialization: "Цивільне право, компенсації військовим"
+    },
+    {
+      name: "Мельник Андрій Ігорович",
+      position: "Юрист",
+      image: "/team/legal-5.jpg",
+      specialization: "Підготовка документів, супровід справ"
+    }
+  ]
+
+  // Команда Судово-медичні послуги
+  const medicalTeam = [
+    {
+      name: "Білоус Віктор Миколайович",
+      position: "Головний експерт",
+      image: "/team/medical-1.jpg",
+      specialization: "Судово-медична експертиза, 20 років досвіду"
+    },
+    {
+      name: "Кравченко Олена Василівна",
+      position: "Лікар-експерт",
+      image: "/team/medical-2.jpg",
+      specialization: "Незалежна оцінка стану здоров'я"
+    },
+    {
+      name: "Сидоренко Павло Олегович",
+      position: "Медичний експерт",
+      image: "/team/medical-3.jpg",
+      specialization: "Оцінка професійних захворювань"
+    },
+    {
+      name: "Ткаченко Наталія Іванівна",
+      position: "Лікар-консультант",
+      image: "/team/medical-4.jpg",
+      specialization: "Медичне консультування, аналіз документів"
+    },
+    {
+      name: "Морозов Сергій Дмитрович",
+      position: "Експерт-аналітик",
+      image: "/team/medical-5.jpg",
+      specialization: "Комплексна медична експертиза"
+    }
+  ]
+
   return (
     <>
       <Hero
@@ -64,6 +133,19 @@ export default function HomePage() {
         description="Цифри, які говорять про нашу ефективність"
         items={proofItems}
         badges={["Ліцензована юридична фірма", "Член Адвокатської палати", "Спеціалізація: військове право"]}
+      />
+
+      <Team
+        title="Наша команда"
+        description="Професіонали, які завжди на вашому боці"
+        organization="Правовий Захист Дніпро"
+        members={legalTeam}
+      />
+
+      <Team
+        title=""
+        organization="Судово-медичні послуги"
+        members={medicalTeam}
       />
 
       <CTA
